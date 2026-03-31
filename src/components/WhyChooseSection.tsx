@@ -16,7 +16,7 @@ const WhyChooseSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="why-us" className="py-24 md:py-32 gradient-charcoal grit-overlay relative" aria-label="Why choose Hercules Sports">
+    <section id="why-us" className="py-24 md:py-32 section-light-alt relative" aria-label="Why choose Hercules Sports">
       <div className="container mx-auto px-4 md:px-8 relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -25,7 +25,7 @@ const WhyChooseSection = () => {
           className="text-center mb-16"
         >
           <p className="text-sm tracking-[0.3em] text-primary mb-4 font-body">THE ADVANTAGE</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold" style={{ color: "hsl(var(--light-fg))" }}>
             WHY CHOOSE <span className="text-primary">HERCULES</span>
           </h2>
         </motion.div>
@@ -37,13 +37,17 @@ const WhyChooseSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="p-8 bg-secondary/30 border border-border hover:border-primary/30 transition-all duration-300 group"
+              className="p-8 border transition-all duration-300 group hover:shadow-lg"
+              style={{
+                backgroundColor: "hsl(var(--light-card))",
+                borderColor: "hsl(var(--light-border))",
+              }}
             >
               <f.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="text-base font-bold text-foreground mb-2 font-display tracking-wider">
+              <h3 className="text-base font-bold mb-2 font-display tracking-wider" style={{ color: "hsl(var(--light-fg))" }}>
                 {f.title.toUpperCase()}
               </h3>
-              <p className="text-sm text-muted-foreground font-body leading-relaxed">{f.desc}</p>
+              <p className="text-sm font-body leading-relaxed" style={{ color: "hsl(var(--light-muted))" }}>{f.desc}</p>
             </motion.div>
           ))}
         </div>
