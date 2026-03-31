@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import BrushDivider from "@/components/BrushDivider";
 import AboutSection from "@/components/AboutSection";
 import ProductsSection from "@/components/ProductsSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
@@ -23,16 +24,21 @@ const Index = () => {
         <main>
           <Navbar />
           <HeroSection />
-          <div className="section-divider" />
+          <BrushDivider from="dark" to="light" />
           <AboutSection />
+          <BrushDivider from="light" to="dark" flip />
           <ProductsSection />
-          <div className="section-divider" />
+          <BrushDivider from="dark" to="light" />
           <WhyChooseSection />
+          <BrushDivider from="light" to="dark" flip />
           <ScrollShowcase />
+          <BrushDivider from="dark" to="light" />
           <TestimonialsSection />
+          <BrushDivider from="light" to="dark" flip />
           <StatsSection />
+          <BrushDivider from="dark" to="light" />
           <LocationSection />
-          <div className="section-divider" />
+          <BrushDivider from="light" to="dark" flip />
           <CTASection />
           <Footer />
         </main>

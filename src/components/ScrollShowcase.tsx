@@ -46,22 +46,15 @@ const ScrollShowcase = () => {
   return (
     <section ref={containerRef} className="relative" style={{ height: `${showcaseItems.length * 100}vh` }} aria-label="Equipment showcase">
       <div className="sticky top-0 h-screen overflow-hidden">
-        {showcaseItems.map((item, i) => {
-          const start = i / showcaseItems.length;
-          const end = (i + 1) / showcaseItems.length;
-
-          return (
-            <ShowcaseCard
-              key={item.title}
-              item={item}
-              index={i}
-              progress={scrollYProgress}
-              start={start}
-              end={end}
-              total={showcaseItems.length}
-            />
-          );
-        })}
+        {showcaseItems.map((item, i) => (
+          <ShowcaseCard
+            key={item.title}
+            item={item}
+            index={i}
+            progress={scrollYProgress}
+            total={showcaseItems.length}
+          />
+        ))}
       </div>
     </section>
   );
@@ -71,20 +64,43 @@ interface ShowcaseCardProps {
   item: typeof showcaseItems[0];
   index: number;
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
-  start: number;
-  end: number;
   total: number;
 }
 
-const ShowcaseCard = ({ item, index, progress, start, end, total }: ShowcaseCardProps) => {
-  const opacity = useTransform(progress, [start, start + 0.05, end - 0.05, end], [0, 1, 1, index === total - 1 ? 1 : 0]);
-  const scale = useTransform(progress, [start, start + 0.05, end - 0.05, end], [0.9, 1, 1, index === total - 1 ? 1 : 0.95]);
-  const y = useTransform(progress, [start, start + 0.05], [60, 0]);
+const ShowcaseCard = ({ item, index, progress, total }: ShowcaseCardProps) => {
+  const start = index / total;
+  const end = (index + 1) / total;
+  const isLast = index === total - 1;
+
+  // Active card: fade in, stay, then blur+fade out
+  const opacity = useTransform(
+    progress,
+    [start, start + 0.04, end - 0.06, end],
+    [0, 1, 1, isLast ? 1 : 0.3]
+  );
+  const scale = useTransform(
+    progress,
+    [start, start + 0.04, end - 0.06, end],
+    [0.92, 1, 1, isLast ? 1 : 0.96]
+  );
+  const y = useTransform(progress, [start, start + 0.05], [50, 0]);
+
+  // Blur: inactive cards get blurred as the next card comes in
+  const blurVal = useTransform(
+    progress,
+    [start, start + 0.04, end - 0.06, end],
+    [8, 0, 0, isLast ? 0 : 12]
+  );
 
   return (
     <motion.div
-      style={{ opacity, scale, y }}
-      className="absolute inset-0 flex items-center"
+      style={{
+        opacity,
+        scale,
+        y,
+        filter: useTransform(blurVal, (v) => `blur(${v}px)`),
+      }}
+      className="absolute inset-0 flex items-center will-change-transform"
     >
       <div className="absolute inset-0">
         <img
@@ -93,7 +109,7 @@ const ShowcaseCard = ({ item, index, progress, start, end, total }: ShowcaseCard
           loading="lazy"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/75" />
+        <div className="absolute inset-0 bg-background/70" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-8">

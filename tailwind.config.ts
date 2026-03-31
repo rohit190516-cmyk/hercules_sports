@@ -56,6 +56,11 @@ export default {
         offwhite: "hsl(var(--offwhite))",
         cream: "hsl(var(--cream))",
         gold: "hsl(var(--gold))",
+        "light-bg": "hsl(var(--light-bg))",
+        "light-fg": "hsl(var(--light-fg))",
+        "light-muted": "hsl(var(--light-muted))",
+        "light-border": "hsl(var(--light-border))",
+        "light-card": "hsl(var(--light-card))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

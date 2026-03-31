@@ -8,36 +8,12 @@ import sportsAccessories from "@/assets/sports-accessories.jpg";
 import functionalTraining from "@/assets/functional-training.jpg";
 
 const categories = [
-  {
-    title: "Commercial Gym Equipment",
-    desc: "Professional-grade machines for fitness centers and training facilities.",
-    image: commercialGym,
-  },
-  {
-    title: "Home Gym Setups",
-    desc: "Complete workout solutions designed for your personal training space.",
-    image: homeGym,
-  },
-  {
-    title: "Strength Training",
-    desc: "Power racks, barbells, benches, and heavy-duty weight systems.",
-    image: strengthEquipment,
-  },
-  {
-    title: "Cardio Machines",
-    desc: "Treadmills, ellipticals, and cycling machines for endurance training.",
-    image: cardioEquipment,
-  },
-  {
-    title: "Sports Accessories",
-    desc: "Gloves, bands, ropes, and essential training accessories.",
-    image: sportsAccessories,
-  },
-  {
-    title: "Functional Training",
-    desc: "Kettlebells, battle ropes, TRX, and versatile training equipment.",
-    image: functionalTraining,
-  },
+  { title: "Commercial Gym Equipment", desc: "Professional-grade machines for fitness centers and training facilities.", image: commercialGym },
+  { title: "Home Gym Setups", desc: "Complete workout solutions designed for your personal training space.", image: homeGym },
+  { title: "Strength Training", desc: "Power racks, barbells, benches, and heavy-duty weight systems.", image: strengthEquipment },
+  { title: "Cardio Machines", desc: "Treadmills, ellipticals, and cycling machines for endurance training.", image: cardioEquipment },
+  { title: "Sports Accessories", desc: "Gloves, bands, ropes, and essential training accessories.", image: sportsAccessories },
+  { title: "Functional Training", desc: "Kettlebells, battle ropes, TRX, and versatile training equipment.", image: functionalTraining },
 ];
 
 const ProductsSection = () => {
@@ -45,8 +21,8 @@ const ProductsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="products" className="py-24 md:py-32 gradient-dark relative" aria-label="Product categories">
-      <div className="container mx-auto px-4 md:px-8" ref={ref}>
+    <section id="products" className="py-24 md:py-32 gradient-charcoal grit-overlay relative" aria-label="Product categories">
+      <div className="container mx-auto px-4 md:px-8 relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
