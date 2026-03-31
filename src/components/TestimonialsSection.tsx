@@ -3,9 +3,9 @@ import { useRef } from "react";
 import { Star, Quote } from "lucide-react";
 
 const testimonials = [
-  { name: "Rajat Singh", text: "Cooperative staff, decent price. Happy after visiting the place. Great selection of equipment for both home and gym use." },
-  { name: "Dhruv Rajauria", text: "Polite and friendly behaviour of owner is the thing I liked most. They genuinely help you pick the right equipment." },
-  { name: "Ajay Kumar Chaudhary", text: "Great experience, excellent variety available for each product. Professional setup and trustworthy quality." },
+  { name: "Rajat Singh", text: "Cooperative staff, decent price. Happy after visiting the place. Great selection of equipment for home use and sports." },
+  { name: "Dhruv Rajauria", text: "Polite and friendly behaviour of owner is the thing I liked most. They genuinely help you pick the right gear." },
+  { name: "Ajay Kumar Chaudhary", text: "Great experience, excellent variety available for each product. Authentic supplements and trustworthy quality." },
 ];
 
 const TestimonialsSection = () => {

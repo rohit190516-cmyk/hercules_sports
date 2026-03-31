@@ -3,12 +3,12 @@ import { useRef } from "react";
 import { Users, Globe, Wrench, LayoutGrid, HeartHandshake, ShieldCheck } from "lucide-react";
 
 const features = [
-  { icon: Users, title: "Trusted by Gym Owners", desc: "Fitness enthusiasts and commercial gym owners rely on our equipment." },
-  { icon: Globe, title: "Global-Quality Brands", desc: "Curated selection from leading international fitness equipment manufacturers." },
-  { icon: Wrench, title: "Built for Durability", desc: "Every product is performance-tested and engineered for long-term use." },
-  { icon: LayoutGrid, title: "Excellent Variety", desc: "Comprehensive range covering every fitness need and training style." },
-  { icon: HeartHandshake, title: "Expert Guidance", desc: "Cooperative and knowledgeable staff for professional buying support." },
-  { icon: ShieldCheck, title: "Commercial & Home Ready", desc: "Equipment suitable for both professional gyms and personal spaces." },
+  { icon: Users, title: "Trusted by Fitness Enthusiasts", desc: "Local athletes and everyday fitness lovers rely on our equipment." },
+  { icon: Globe, title: "Quality Brands", desc: "Curated selection from trusted sports and fitness equipment manufacturers." },
+  { icon: Wrench, title: "Built for Durability", desc: "Every product is performance-tested and engineered for regular use." },
+  { icon: LayoutGrid, title: "Excellent Variety", desc: "Comprehensive range covering every sport, fitness need, and supplement." },
+  { icon: HeartHandshake, title: "Expert Guidance", desc: "Cooperative and knowledgeable staff for best purchasing support." },
+  { icon: ShieldCheck, title: "Home Gym Ready", desc: "Equipment that fits perfectly into personal spaces and daily routines." },
 ];
 
 const WhyChooseSection = () => {

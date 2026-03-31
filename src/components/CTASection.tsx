@@ -24,7 +24,7 @@ const CTASection = () => {
             UPGRADE YOUR <span className="text-primary">FITNESS SPACE</span> TODAY
           </h2>
           <p className="text-muted-foreground text-base md:text-lg font-body mb-10 max-w-xl mx-auto">
-            Visit Hercules Sports & Fitness in Varanasi for professional guidance and the finest fitness equipment selection.
+            Visit Hercules Sports & Fitness in Varanasi for expert guidance and the finest selection of sports gear, supplements, and fitness equipment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

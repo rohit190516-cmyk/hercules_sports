@@ -8,12 +8,12 @@ import sportsAccessories from "@/assets/sports-accessories.jpg";
 import functionalTraining from "@/assets/functional-training.jpg";
 
 const categories = [
-  { title: "Commercial Gym Equipment", desc: "Professional-grade machines for fitness centers and training facilities.", image: commercialGym },
-  { title: "Home Gym Setups", desc: "Complete workout solutions designed for your personal training space.", image: homeGym },
-  { title: "Strength Training", desc: "Power racks, barbells, benches, and heavy-duty weight systems.", image: strengthEquipment },
-  { title: "Cardio Machines", desc: "Treadmills, ellipticals, and cycling machines for endurance training.", image: cardioEquipment },
-  { title: "Sports Accessories", desc: "Gloves, bands, ropes, and essential training accessories.", image: sportsAccessories },
-  { title: "Functional Training", desc: "Kettlebells, battle ropes, TRX, and versatile training equipment.", image: functionalTraining },
+  { title: "Sports Equipment", desc: "Cricket bats, badminton rackets, tennis gear, and field essentials.", image: functionalTraining },
+  { title: "Home Gym Essentials", desc: "Complete basic workout solutions designed for your personal space.", image: homeGym },
+  { title: "Nutritional Supplements", desc: "Premium proteins, pre-workouts, and vitamins for daily fitness support.", image: strengthEquipment },
+  { title: "Cardio Machines", desc: "Treadmills, regular ellipticals, and cycles for everyday fitness.", image: cardioEquipment },
+  { title: "Sports Accessories", desc: "Gloves, bands, skipping ropes, and essential training add-ons.", image: sportsAccessories },
+  { title: "Basic Weights", desc: "Dumbbells, barbells, standard plates, and everyday lifting gear.", image: commercialGym },
 ];
 
 const ProductsSection = () => {

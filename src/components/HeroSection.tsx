@@ -35,11 +35,11 @@ const HeroSection = () => {
           </motion.p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground mb-6">
-            POWER YOUR FITNESS
+            YOUR COMPLETE
             <br />
-            <span className="text-primary">JOURNEY</span> WITH
+            <span className="text-primary">SPORTS & FITNESS</span>
             <br />
-            PREMIUM EQUIPMENT
+            DESTINATION
           </h1>
 
           <motion.p
@@ -48,8 +48,9 @@ const HeroSection = () => {
             transition={{ delay: 0.8 }}
             className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 font-body leading-relaxed"
           >
-            Professional-grade fitness machines, home gym setups, and sports accessories
-            from leading global brands. Built for performance, engineered for durability.
+            Discover top-quality supplements, essential home gym equipment, and premium 
+            sports gear including cricket bats, badminton rackets, and everyday fitness accessories. 
+            Everything you need for your active lifestyle.
           </motion.p>
 
           <motion.div

@@ -9,7 +9,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold tracking-wider text-foreground font-display mb-1">HERCULES</h3>
             <p className="text-[10px] tracking-[0.3em] text-muted-foreground font-body mb-4">SPORTS & FITNESS</p>
             <p className="text-sm text-muted-foreground font-body leading-relaxed">
-              Varanasi's trusted destination for premium fitness and sports equipment. Global brands, professional guidance, lasting quality.
+              Varanasi's trusted destination for sports gear, supplements, and fitness equipment. Trusted brands, expert guidance, lasting quality.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Hercules Sports & Fitness, Varanasi. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground font-body">
-            Premium Fitness Equipment Wholesaler in Varanasi, Uttar Pradesh
+            Complete Sports, Supplements, and Fitness Destination in Varanasi, UP
           </p>
         </div>
       </div>

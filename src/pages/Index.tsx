@@ -24,21 +24,21 @@ const Index = () => {
         <main>
           <Navbar />
           <HeroSection />
-          <BrushDivider from="dark" to="light" />
+          <BrushDivider from="background" to="light-bg" />
           <AboutSection />
-          <BrushDivider from="light" to="dark" flip />
+          <BrushDivider from="light-bg" to="charcoal-start" flip />
           <ProductsSection />
-          <BrushDivider from="dark" to="light" />
+          <BrushDivider from="charcoal-end" to="light-bg-alt" />
           <WhyChooseSection />
-          <BrushDivider from="light" to="dark" flip />
+          <BrushDivider from="light-bg-alt" to="background" flip />
           <ScrollShowcase />
-          <BrushDivider from="dark" to="light" />
+          <BrushDivider from="background" to="light-bg" />
           <TestimonialsSection />
-          <BrushDivider from="light" to="dark" flip />
+          <BrushDivider from="light-bg" to="charcoal-start" flip />
           <StatsSection />
-          <BrushDivider from="dark" to="light" />
+          <BrushDivider from="charcoal-end" to="light-bg-alt" />
           <LocationSection />
-          <BrushDivider from="light" to="dark" flip />
+          <BrushDivider from="light-bg-alt" to="background" flip />
           <CTASection />
           <Footer />
         </main>

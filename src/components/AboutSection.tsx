@@ -7,10 +7,10 @@ const AboutSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const pillars = [
-    { icon: Shield, label: "Global Brands" },
-    { icon: Dumbbell, label: "Advanced Machines" },
-    { icon: Target, label: "Performance Focused" },
-    { icon: Award, label: "Built to Last" },
+    { icon: Shield, label: "Quality Brands" },
+    { icon: Dumbbell, label: "Basic Gym Setup" },
+    { icon: Target, label: "Sports Essentials" },
+    { icon: Award, label: "Top Supplements" },
   ];
 
   return (
@@ -26,7 +26,7 @@ const AboutSection = () => {
             <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight" style={{ color: "hsl(var(--light-fg))" }}>
               YOUR TRUSTED DESTINATION FOR
               <br />
-              <span className="text-primary">QUALITY FITNESS</span> EQUIPMENT
+              <span className="text-primary">SPORTS & FITNESS</span> ESSENTIALS
             </h2>
           </motion.div>
 
@@ -37,9 +37,9 @@ const AboutSection = () => {
             className="text-base md:text-lg leading-relaxed mb-12 font-body max-w-3xl"
             style={{ color: "hsl(var(--light-muted))" }}
           >
-            Hercules Sports & Fitness brings leading global fitness and sports equipment brands under one roof in Varanasi.
-            From advanced commercial training machines to complete home gym setups and essential sports accessories —
-            every product is selected for performance, durability, and long-term value.
+            Hercules Sports & Fitness brings quality athletic gear, fitness equipment, and nutritional supplements under one roof in Varanasi.
+            From simple home gym setups and basic weights to essential sports gear like cricket bats and badminton rackets —
+            every product is selected to help you stay active, healthy, and performing at your best.
           </motion.p>
 
           <motion.div
