@@ -13,23 +13,23 @@ const HeroSection = () => {
           height={1080}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-white/70" />
-        <div className="absolute inset-0 bg-hero-overlay" />
+        <div className="absolute inset-0 bg-white/10" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-8 text-center">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 text-center pt-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto bg-white/85 backdrop-blur-md rounded-3xl shadow-2xl border border-white/50 p-8 md:p-12 lg:p-16"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-sm md:text-base tracking-[0.4em] text-primary mb-6 font-body"
+            className="text-sm md:text-base tracking-[0.4em] text-primary mb-6 font-body font-semibold"
           >
             VARANASI'S PREMIER FITNESS EQUIPMENT DESTINATION
           </motion.p>
@@ -61,13 +61,13 @@ const HeroSection = () => {
           >
             <a
               href="#products"
-              className="px-8 py-4 bg-primary text-primary-foreground font-display tracking-wider text-sm hover:bg-primary/90 transition-colors"
+              className="px-8 py-4 bg-primary text-primary-foreground font-display tracking-wider text-sm hover:bg-primary/90 transition-colors rounded-lg"
             >
               EXPLORE PRODUCTS
             </a>
             <a
               href="#location"
-              className="px-8 py-4 border border-foreground/30 text-foreground font-display tracking-wider text-sm hover:bg-foreground/5 transition-colors"
+              className="px-8 py-4 border border-border bg-white text-foreground font-display tracking-wider text-sm hover:bg-slate-50 transition-colors rounded-lg"
             >
               VISIT STORE
             </a>
