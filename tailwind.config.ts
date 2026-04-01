@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Oswald", "sans-serif"],
+        display: ["Plus Jakarta Sans", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
       colors: {
@@ -51,16 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        steel: "hsl(var(--steel))",
-        charcoal: "hsl(var(--charcoal))",
-        offwhite: "hsl(var(--offwhite))",
-        cream: "hsl(var(--cream))",
-        gold: "hsl(var(--gold))",
-        "light-bg": "hsl(var(--light-bg))",
-        "light-fg": "hsl(var(--light-fg))",
-        "light-muted": "hsl(var(--light-muted))",
-        "light-border": "hsl(var(--light-border))",
-        "light-card": "hsl(var(--light-card))",
+        steel: "#595959",
+        charcoal: "#1A1A1A",
+        offwhite: "#FAFAFA",
+        cream: "#F5F5F5",
+        gold: "#EAB308",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

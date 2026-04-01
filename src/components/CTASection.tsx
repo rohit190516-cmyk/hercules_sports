@@ -10,7 +10,7 @@ const CTASection = () => {
     <section className="relative py-32 md:py-40 overflow-hidden" aria-label="Call to action">
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover" loading="lazy" />
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-white/90" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-8 text-center" ref={ref}>
@@ -29,13 +29,13 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#location"
-              className="px-8 py-4 bg-primary text-primary-foreground font-display tracking-wider text-sm hover:bg-primary/90 transition-colors"
+              className="px-8 py-4 bg-primary text-primary-foreground font-display tracking-wider text-sm hover:bg-primary/90 transition-colors rounded-md"
             >
               VISIT OUR STORE
             </a>
             <a
               href="tel:+910000000000"
-              className="px-8 py-4 border border-foreground/30 text-foreground font-display tracking-wider text-sm hover:bg-foreground/5 transition-colors"
+              className="px-8 py-4 border border-foreground/30 text-foreground font-display tracking-wider text-sm hover:bg-slate-50 transition-colors rounded-md bg-white"
             >
               CALL NOW
             </a>

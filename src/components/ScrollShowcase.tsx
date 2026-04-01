@@ -109,25 +109,27 @@ const ShowcaseCard = ({ item, index, progress, total }: ShowcaseCardProps) => {
           loading="lazy"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/70" />
+        {/* Subtle gradient to ensure the image edges look nice, but image remains clear */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-sm tracking-[0.3em] text-primary mb-4 font-body">
+          <div className="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-xl border border-white/50 max-w-xl">
+            <p className="text-sm tracking-[0.3em] text-primary mb-4 font-body font-semibold">
               {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
             </p>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               {item.title}
             </h2>
-            <p className="text-muted-foreground text-base md:text-lg font-body leading-relaxed max-w-md">
+            <p className="text-muted-foreground text-base md:text-lg font-body leading-relaxed">
               {item.desc}
             </p>
           </div>
-          <div className="flex flex-col items-center md:items-end">
-            <span className="text-6xl md:text-8xl font-bold text-primary font-display">{item.stat}</span>
-            <span className="text-sm tracking-[0.2em] text-muted-foreground font-body mt-2">{item.statLabel.toUpperCase()}</span>
+
+          <div className="flex flex-col items-start md:items-center justify-center p-8 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-white/50 w-full max-w-sm ml-auto">
+            <span className="text-5xl md:text-7xl font-bold text-primary font-display">{item.stat}</span>
+            <span className="text-sm tracking-[0.2em] text-foreground font-body mt-3 font-semibold text-center">{item.statLabel.toUpperCase()}</span>
           </div>
         </div>
       </div>

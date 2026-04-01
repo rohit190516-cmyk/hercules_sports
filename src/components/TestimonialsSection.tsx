@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="reviews" className="py-24 md:py-32 section-light relative" aria-label="Customer reviews">
+    <section id="reviews" className="py-24 md:py-32 bg-slate-50 relative" aria-label="Customer reviews">
       <div className="container mx-auto px-4 md:px-8 relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,15 +22,15 @@ const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           <p className="text-sm tracking-[0.3em] text-primary mb-4 font-body">TESTIMONIALS</p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ color: "hsl(var(--light-fg))" }}>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
             WHAT OUR <span className="text-primary">CUSTOMERS</span> SAY
           </h2>
           <div className="flex items-center justify-center gap-2 mt-4">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 fill-gold text-gold" />
             ))}
-            <span className="font-bold ml-2 font-display text-lg" style={{ color: "hsl(var(--light-fg))" }}>5.0</span>
-            <span className="text-sm font-body ml-1" style={{ color: "hsl(var(--light-muted))" }}>(74 reviews)</span>
+            <span className="font-bold ml-2 font-display text-lg text-foreground">5.0</span>
+            <span className="text-sm font-body ml-1 text-muted-foreground">(74 reviews)</span>
           </div>
         </motion.div>
 
@@ -41,19 +41,15 @@ const TestimonialsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="p-8 border relative group hover:shadow-lg transition-shadow"
-              style={{
-                backgroundColor: "hsl(var(--light-card))",
-                borderColor: "hsl(var(--light-border))",
-              }}
+              className="p-8 border border-border bg-white rounded-xl relative group hover:shadow-md transition-all duration-300"
             >
               <Quote className="w-8 h-8 text-primary/20 mb-4" />
-              <p className="text-sm leading-relaxed mb-6 font-body" style={{ color: "hsl(var(--light-muted))" }}>"{t.text}"</p>
+              <p className="text-sm leading-relaxed mb-6 font-body text-muted-foreground">"{t.text}"</p>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-xs font-bold text-primary font-display">{t.name[0]}</span>
                 </div>
-                <span className="text-sm font-body font-medium" style={{ color: "hsl(var(--light-fg))" }}>{t.name}</span>
+                <span className="text-sm font-body font-medium text-foreground">{t.name}</span>
               </div>
               <div className="flex gap-1 mt-3">
                 {[...Array(5)].map((_, j) => (

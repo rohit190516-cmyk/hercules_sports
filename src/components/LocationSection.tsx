@@ -7,7 +7,7 @@ const LocationSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="location" className="py-24 md:py-32 section-light-alt relative" aria-label="Store location and contact information">
+    <section id="location" className="py-24 md:py-32 bg-white relative" aria-label="Store location and contact information">
       <div className="container mx-auto px-4 md:px-8 relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,7 +16,7 @@ const LocationSection = () => {
           className="text-center mb-16"
         >
           <p className="text-sm tracking-[0.3em] text-primary mb-4 font-body">VISIT US</p>
-          <h2 className="text-3xl md:text-5xl font-bold" style={{ color: "hsl(var(--light-fg))" }}>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
             FIND OUR <span className="text-primary">STORE</span>
           </h2>
         </motion.div>
@@ -28,21 +28,21 @@ const LocationSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="flex gap-4 items-start p-6 border" style={{ backgroundColor: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
+            <div className="flex gap-4 items-start p-6 border border-border bg-slate-50/50 rounded-xl hover:shadow-sm transition-shadow">
               <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
               <div>
-                <h3 className="text-sm font-bold font-display tracking-wider mb-1" style={{ color: "hsl(var(--light-fg))" }}>ADDRESS</h3>
-                <p className="text-sm font-body leading-relaxed" style={{ color: "hsl(var(--light-muted))" }}>
+                <h3 className="text-sm font-bold font-display tracking-widest mb-1 text-foreground">ADDRESS</h3>
+                <p className="text-sm font-body leading-relaxed text-muted-foreground">
                   B29, GPS Tower, B29, Sankat Mochan Rd, Anandbagh, Bhelupur, Varanasi, Uttar Pradesh 221005
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 items-start p-6 border" style={{ backgroundColor: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
+            <div className="flex gap-4 items-start p-6 border border-border bg-slate-50/50 rounded-xl hover:shadow-sm transition-shadow">
               <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
               <div>
-                <h3 className="text-sm font-bold font-display tracking-wider mb-1" style={{ color: "hsl(var(--light-fg))" }}>BUSINESS HOURS</h3>
-                <p className="text-sm font-body" style={{ color: "hsl(var(--light-muted))" }}>Open · Closes 9:30 PM</p>
+                <h3 className="text-sm font-bold font-display tracking-widest mb-1 text-foreground">BUSINESS HOURS</h3>
+                <p className="text-sm font-body text-muted-foreground">Open · Closes 9:30 PM</p>
               </div>
             </div>
 
@@ -51,18 +51,14 @@ const LocationSection = () => {
                 href="https://www.google.com/maps/search/?api=1&query=Hercules+Sports+Fitness+Varanasi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-display tracking-wider text-sm hover:bg-primary/90 transition-colors"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-display tracking-wider text-sm hover:bg-primary/90 transition-colors rounded-md"
               >
                 <Navigation className="w-4 h-4" />
                 GET DIRECTIONS
               </a>
               <a
                 href="tel:+910000000000"
-                className="flex items-center justify-center gap-2 px-6 py-3 border font-display tracking-wider text-sm transition-colors"
-                style={{
-                  borderColor: "hsl(var(--light-border))",
-                  color: "hsl(var(--light-fg))",
-                }}
+                className="flex items-center justify-center gap-2 px-6 py-3 border border-border bg-white text-foreground hover:bg-slate-50 font-display tracking-wider text-sm transition-colors rounded-md"
               >
                 <Phone className="w-4 h-4" />
                 CALL NOW
@@ -74,8 +70,7 @@ const LocationSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="w-full h-[300px] lg:h-full min-h-[300px] border overflow-hidden"
-            style={{ borderColor: "hsl(var(--light-border))" }}
+            className="w-full h-[300px] lg:h-full min-h-[300px] border border-border rounded-xl overflow-hidden shadow-sm"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.123!2d83.0!3d25.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE4JzAwLjAiTiA4M8KwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"

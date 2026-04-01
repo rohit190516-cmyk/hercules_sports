@@ -13,7 +13,7 @@ const StatsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-20 md:py-24 gradient-charcoal grit-overlay relative border-y border-border" aria-label="Business statistics">
+    <section className="py-20 md:py-24 bg-slate-50 relative border-y border-border" aria-label="Business statistics">
       <div className="container mx-auto px-4 md:px-8 relative z-10" ref={ref}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((s, i) => (

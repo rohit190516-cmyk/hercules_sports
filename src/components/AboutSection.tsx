@@ -14,7 +14,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 md:py-32 section-light relative" aria-label="About Hercules Sports and Fitness">
+    <section id="about" className="py-24 md:py-32 bg-white relative" aria-label="About Hercules Sports and Fitness">
       <div className="container mx-auto px-4 md:px-8 relative z-10" ref={ref}>
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -23,7 +23,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="text-sm tracking-[0.3em] text-primary mb-4 font-body">ABOUT US</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight" style={{ color: "hsl(var(--light-fg))" }}>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight text-foreground">
               YOUR TRUSTED DESTINATION FOR
               <br />
               <span className="text-primary">SPORTS & FITNESS</span> ESSENTIALS
@@ -34,8 +34,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base md:text-lg leading-relaxed mb-12 font-body max-w-3xl"
-            style={{ color: "hsl(var(--light-muted))" }}
+            className="text-base md:text-lg leading-relaxed mb-12 font-body max-w-3xl text-muted-foreground"
           >
             Hercules Sports & Fitness brings quality athletic gear, fitness equipment, and nutritional supplements under one roof in Varanasi.
             From simple home gym setups and basic weights to essential sports gear like cricket bats and badminton rackets —
@@ -51,14 +50,10 @@ const AboutSection = () => {
             {pillars.map((p) => (
               <div
                 key={p.label}
-                className="flex flex-col items-center gap-3 p-6 border transition-colors group"
-                style={{
-                  backgroundColor: "hsl(var(--light-card))",
-                  borderColor: "hsl(var(--light-border))",
-                }}
+                className="flex flex-col items-center gap-3 p-6 border border-border bg-background rounded-lg hover:shadow-sm transition-all group"
               >
                 <p.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-                <span className="text-xs tracking-[0.2em] font-display" style={{ color: "hsl(var(--light-fg))" }}>{p.label.toUpperCase()}</span>
+                <span className="text-xs tracking-[0.2em] font-display text-foreground font-semibold">{p.label.toUpperCase()}</span>
               </div>
             ))}
           </motion.div>

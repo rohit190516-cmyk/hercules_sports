@@ -21,7 +21,7 @@ const ProductsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="products" className="py-24 md:py-32 gradient-charcoal grit-overlay relative" aria-label="Product categories">
+    <section id="products" className="py-24 md:py-32 bg-slate-50 relative" aria-label="Product categories">
       <div className="container mx-auto px-4 md:px-8 relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,33 +35,33 @@ const ProductsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.title}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative overflow-hidden aspect-[4/3] cursor-pointer"
+              className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-border flex flex-col cursor-pointer"
             >
-              <img
-                src={cat.image}
-                alt={`${cat.title} - fitness equipment available at Hercules Sports Varanasi`}
-                loading="lazy"
-                width={800}
-                height={600}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-background/60 group-hover:bg-background/40 transition-colors duration-500" />
-              <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 font-display tracking-wider">
-                  {cat.title.toUpperCase()}
+              <div className="relative overflow-hidden aspect-[4/3]">
+                <img
+                  src={cat.image}
+                  alt={`${cat.title} - fitness equipment available at Hercules Sports Varanasi`}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col flex-grow p-6 md:p-8">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-3 font-display tracking-wide">
+                  {cat.title}
                 </h3>
-                <p className="text-sm text-muted-foreground font-body opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
+                <p className="text-sm text-muted-foreground font-body leading-relaxed">
                   {cat.desc}
                 </p>
               </div>
-              <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-hover:w-full transition-all duration-500" />
             </motion.div>
           ))}
         </div>
