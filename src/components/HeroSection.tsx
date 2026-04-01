@@ -3,7 +3,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-20 md:pt-24 pb-12" aria-label="Hero">
       {/* Background */}
       <div className="absolute inset-0">
         <img
@@ -18,23 +18,23 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-8 text-center pt-20">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="max-w-4xl mx-auto bg-white/85 backdrop-blur-md rounded-3xl shadow-2xl border border-white/50 p-8 md:p-12 lg:p-16"
+          className="max-w-4xl mx-auto bg-white/85 backdrop-blur-md rounded-3xl shadow-2xl border border-white/50 p-6 py-10 md:p-12 lg:p-16"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-sm md:text-base tracking-[0.4em] text-primary mb-6 font-body font-semibold"
+            className="text-[10px] sm:text-xs md:text-sm tracking-[0.2em] md:tracking-[0.4em] text-primary mb-4 md:mb-6 font-body font-semibold uppercase"
           >
-            VARANASI'S PREMIER FITNESS EQUIPMENT DESTINATION
+            Varanasi's Premier Fitness Equipment Destination
           </motion.p>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground mb-4 md:mb-6">
             YOUR COMPLETE
             <br />
             <span className="text-primary">SPORTS & FITNESS</span>
@@ -46,7 +46,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 font-body leading-relaxed"
+            className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 font-body leading-relaxed"
           >
             Discover top-quality supplements, essential home gym equipment, and premium 
             sports gear including cricket bats, badminton rackets, and everyday fitness accessories. 
